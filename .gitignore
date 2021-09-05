@@ -8,3 +8,11 @@ glove*.txt
 glove*.txt.filtered
 *.v*_*_conll
 *.hdf5
+
+#created by me
+onto-train/
+pretrained/
+conll-2012/
+cased_L-12_H-768_A-12/
+cased_L-24_H-1024_A-16/
+cased_config_vocab/
