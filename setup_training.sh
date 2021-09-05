@@ -10,6 +10,8 @@ dlx() {
   rm $data_dir/$2
 }
 
+#dowmload original bert, spanbert model
+
 download_bert(){
   model=$1
   wget -P $data_dir https://storage.googleapis.com/bert_models/2018_10_18/$model.zip
@@ -26,6 +28,7 @@ download_spanbert(){
   rm $data_dir/$model.tar.gz
 }
 
+#download conll-2012 skeleton
 
 conll_url=http://conll.cemantix.org/2012/download
 dlx $conll_url conll-2012-train.v4.tar.gz
@@ -35,6 +38,9 @@ dlx $conll_url/test conll-2012-test-official.v9.tar.gz
 
 dlx $conll_url conll-2012-scripts.v3.tar.gz
 dlx http://conll.cemantix.org/download reference-coreference-scorers.v8.01.tar.gz
+
+#download bert, spanbert embs?
+#spanbert_hf == spanbert hugging face? 
 
 download_bert cased_L-12_H-768_A-12
 download_bert cased_L-24_H-1024_A-16
