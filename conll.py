@@ -12,6 +12,8 @@ BEGIN_DOCUMENT_REGEX = re.compile(r"#begin document \((.*)\); part (\d+)")
 COREF_RESULTS_REGEX = re.compile(r".*Coreference: Recall: \([0-9.]+ / [0-9.]+\) ([0-9.]+)%\tPrecision: \([0-9.]+ / [0-9.]+\) ([0-9.]+)%\tF1: ([0-9.]+)%.*", re.DOTALL)
 
 def get_doc_key(doc_id, part):
+  #print("doc_id: ", doc_id)
+  #print("part: ", part)
   return "{}_{}".format(doc_id, int(part))
 
 def output_conll(input_file, output_file, predictions, subtoken_map):
